@@ -10,8 +10,10 @@ COPY myapp /app/myapp
 
 ENV PYTHONPATH=/app
 
+# Actualiza pip, urllib3, e instala dependencias desde requirements.txt
 RUN pip install --upgrade pip \
-      && pip install --upgrade --no-cache-dir -r /app/myapp/requirements.txt \
+      && pip install --upgrade urllib3 \
+      && pip install --no-cache-dir -r /app/myapp/requirements.txt \
       && rm -rf /var/cache/apk/*
 
 EXPOSE 5000
