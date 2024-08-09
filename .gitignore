@@ -8,11 +8,11 @@ env/
 .virtualenv/
 
 # Archivos de configuración de entorno
-.env
+.e*
 
 # Archivos de logs
 logs/
-*.log
+*.l*
 
 # Archivos de compilación
 build/
@@ -21,10 +21,9 @@ dist/
 *.pyo
 *.pyd
 __pycache__/
+*/mye*/
 mye*/
-
-# Archivos binarios
-*.exe
+*/*t*.*
 
 # Configuración de IDE
 .vscode/
@@ -36,8 +35,7 @@ node_modules/
 bin/
 obj/
 certificates/
-*.json
+*.j*
 *.bkp
 .*/
 */.*
-*.l*
