@@ -3,6 +3,7 @@ from typing import Optional
 from flask import Flask
 from myapp.main.routes import blueprint as main_blueprint
 
+
 def create_app(config_name: Optional[str] = None) -> Flask:
     app = Flask(__name__)
 
@@ -19,5 +20,6 @@ def create_app(config_name: Optional[str] = None) -> Flask:
     app.register_blueprint(main_blueprint)
 
     return app
+
 
 app: Flask = create_app()
