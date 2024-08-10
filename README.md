@@ -1,11 +1,11 @@
-# How to deploy
+# Docker Rapid Scaling Lab
 
 ![alt text][diagram]
 
 ## Clone the repo to your local infra
 
 ``` git
-git clone --recursive --depth=1 https://github.com/omaciasd/devops-test.git --progress; cd .\devops-test\
+git clone --recursive --depth=1 https://github.com/OMaciasd/Docker_Rapid_Scaling_Lab.git; cd .\Docker_Rapid_Scaling_Lab\;
 ```
 
 ## Publish the App Docker Images
@@ -38,7 +38,7 @@ docker push omaciasd/python-microservice:v0.0.7
 
 ``` go
 docker pull omaciasd/python-microservice:last
-docker-compose up -d
+docker-compose up -d --scale python-microservice=3
 ```
 
 ## Build the App, by Kubernetes with the next commands, over the root folder

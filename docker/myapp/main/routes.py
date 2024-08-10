@@ -1,7 +1,9 @@
-from flask import Blueprint, render_template
+# myapp/app/routes.py
+from flask import Blueprint
 
-blueprint = Blueprint('main', __name__)
+blueprint = Blueprint('app', __name__)
 
-@blueprint.route('/')
-def index() -> str:
-    return render_template('index.html')
+
+@blueprint.route('/app')
+def app_route():
+    return "This is the app route!"

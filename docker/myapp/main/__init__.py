@@ -1,8 +1,12 @@
+# myapp/app/__init__.py
 from flask import Flask
-from myapp.main.routes import blueprint as main_blueprint
+from .routes import blueprint  # Ahora importa blueprint desde routes
 
-def create_app(config_name):
+
+def create_app():
     app = Flask(__name__)
-    app.config.from_object(config_name)
-    app.register_blueprint(main_blueprint)
+
+    # Registrar el Blueprint
+    app.register_blueprint(blueprint)
+
     return app
