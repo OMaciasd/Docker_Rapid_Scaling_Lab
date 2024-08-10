@@ -1,17 +1,11 @@
-# test_app.py
-
 import pytest
-from flask import Flask
-from myapp.app import blueprint
-
-# Configura una aplicación Flask de prueba
+from myapp.app import create_app
 
 
 @pytest.fixture
 def client():
-    app = Flask(__name__)
-    app.register_blueprint(blueprint)
-
+    app = create_app()
+    app.config['TESTING'] = True
     with app.test_client() as client:
         yield client
 
